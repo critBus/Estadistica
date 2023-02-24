@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<AnchorPane fx:id="PAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="903.0" styleClass="background" stylesheets="@../../../ReneFX/src/Utiles/FX/CSS/css.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estadistica.Ventana_EstadisticaController">
+   <children>
+      <SplitPane dividerPositions="0.19250425894378195, 0.9335604770017035" layoutX="43.0" layoutY="33.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="transparente" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane fx:id="PAnchorSuperior" prefHeight="202.0" prefWidth="598.0" styleClass="transparente">
+               <children>
+                  <JFXButton fx:id="BResolver" defaultButton="true" layoutX="153.0" layoutY="18.0" onAction="#apretoResolver" styleClass="botomGrisOscuro" text="Resolver" />
+                  <JFXButton fx:id="BCerrar" alignment="CENTER" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="514.0" layoutY="7.0" onAction="#apretoCerrar" prefHeight="46.0" prefWidth="52.0" styleClass="botomTrasparente" text="." textFill="#fffafa" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="7.0">
+                     <graphic>
+                        <EmojiOneView fill="WHITE" glyphName="X" size="30.0" styleClass=".icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BMinimizar" contentDisplay="GRAPHIC_ONLY" layoutX="407.0" layoutY="11.0" onAction="#apretoMinimizar" prefWidth="61.0" styleClass="botomTrasparente" text="." textFill="WHITE" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="10.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fffdfd" glyphName="WINDOW_MINIMIZE" size="30" styleClass=".icono" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BMazimizar" contentDisplay="GRAPHIC_ONLY" layoutX="474.0" layoutY="11.0" onAction="#apretoMazimizar" styleClass="botomTrasparente" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="11.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="WINDOW_MAXIMIZE" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BHome" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="265.0" layoutY="20.0" onMousePressed="#apretoHome" styleClass="botomTrasparente" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="27.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BClearTodo" contentDisplay="GRAPHIC_ONLY" layoutX="265.0" layoutY="20.0" onMousePressed="#apretoClearTodo" styleClass="botomTrasparente" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <EmojiOneView glyphName="SKULL_CROSSBONES" size="27.0" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BActualizarTodo" contentDisplay="GRAPHIC_ONLY" layoutX="265.0" layoutY="20.0" onMousePressed="#apretoActualizarTodo" styleClass="botomTrasparente" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="25.0" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <EmojiOneView glyphName="BIOHAZARD" layoutX="29.0" layoutY="40.0" size="30" />
+                  <SplitMenuButton fx:id="BSpinner" layoutX="334.0" layoutY="19.0" mnemonicParsing="false" text="&lt;">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </SplitMenuButton>
+                  <JFXTextField fx:id="TNumeroProporcion" layoutX="401.0" layoutY="21.0" promptText="Numero Proporcion" styleClass="JFXtextFielTextoBlanco" />
+                  <Text fx:id="Te" fill="#f8f5f5" layoutX="249.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proporcion:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Spinner fx:id="EsBoostrap" editable="true" layoutX="295.0" layoutY="55.0" />
+                  <JFXButton fx:id="BResolverBoostrap" defaultButton="true" layoutX="153.0" layoutY="53.0" onAction="#apretoResolverBoostrap" styleClass="botomGrisOscuro" text="Resolver Boostrap" />
+               </children>
+            </AnchorPane>
+            <StackPane prefHeight="230.0" prefWidth="598.0" styleClass="transparente">
+               <children>
+                  <SplitPane dividerPositions="0.18687430478309233" prefHeight="160.0" prefWidth="200.0">
+                     <items>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="transparente">
+                           <children>
+                              <JFXTextArea fx:id="TA" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="transparente">
+                           <children>
+                              <HTMLEditor fx:id="HTML" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="200.0" prefWidth="506.0" />
+                           </children>
+                        </StackPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </StackPane>
+            <AnchorPane fx:id="PAnchorInferior" prefHeight="200.0" prefWidth="200.0" />
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
